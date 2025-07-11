@@ -77,7 +77,7 @@ const HorizentalMenu = () => {
                       </div>
                       {/* single menu item*/}
                       {m_item.singleMegamenu.map((ms_item, ms_i) => (
-                        <a href={ms_item.m_childlink} key={ms_i}>
+                        <a to={ms_item.m_childlink} key={ms_i}>
                           {({ isActive }) => (
                             <div className="flex items-center space-x-2 text-[15px] leading-6 rtl:space-x-reverse">
                               <span

@@ -15,6 +15,7 @@ class DashboardController extends Controller
 
     public function page()
     {
-        return Inertia::render('Admin/Page');
+           $text = "This is Panel Page";
+        return Inertia::render('Admin/Page' , compact('text'));
     }
 }

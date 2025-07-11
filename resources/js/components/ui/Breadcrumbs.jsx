@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import {  Link   } from "@inertiajs/react";
 import { menuItems } from "@/constant/data";
 import Icon from "@/components/ui/Icon";
-
+import {route} from "ziggy-js";
 const Breadcrumbs = () => {
 
   const locationName = window.location.pathname.replace("/", "");
@@ -33,7 +33,7 @@ const Breadcrumbs = () => {
         <div className="md:mb-6 mb-4 flex space-x-3 rtl:space-x-reverse">
           <ul className="breadcrumbs">
             <li className="text-primary-500">
-              <Link href={'#'} className="text-lg">
+              <Link href={route('dashboard')} className="text-lg">
                 <Icon icon="heroicons-outline:home" />
               </Link>
               <span className="breadcrumbs-icon rtl:transform rtl:rotate-180">

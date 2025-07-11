@@ -4,8 +4,7 @@ export default function Dashboard() {
     return (
 
             <Layout>
-
-                <Card title="Starter Kit"><h1>hi this is admin dashboard</h1></Card>
+                <Card title="Starter Kit"><p>hi this is admin dashboard</p></Card>
             </Layout>
 
 

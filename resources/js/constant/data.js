@@ -24,20 +24,7 @@ export const menuItems = [
         childtitle: "Level 1.1",
         childlink: "icons",
       },
-      {
-        childtitle: "Level 1.2",
-        childlink: "Level-1",
-        multi_menu: [
-          {
-            multiTitle: "Level 2.1",
-            multiLink: "Level-2",
-          },
-          {
-            multiTitle: "Level 2.2",
-            multiLink: "Level-2.3",
-          },
-        ],
-      },
+
     ],
   },
 ];

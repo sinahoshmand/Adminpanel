@@ -3,6 +3,7 @@ import { Collapse } from "react-collapse";
 
 import Icon from "@/components/ui/Icon";
 import Multilevel from "./Multi";
+import {Link} from "@inertiajs/react";
 
 const Submenu = ({
   activeSubmenu,
@@ -11,6 +12,9 @@ const Submenu = ({
   toggleMultiMenu,
   activeMultiMenu,
 }) => {
+
+    const [isActive , setActive] = useState(false)
+
   return (
     <Collapse isOpened={activeSubmenu === i}>
       <ul className="sub-menu  space-y-4  ">
@@ -51,8 +55,8 @@ const Submenu = ({
                 />
               </div>
             ) : (
-              <a href={subItem.childlink}>
-                {({ isActive }) => (
+              <Link href={subItem.childlink}>
+
                   <span
                     className={`${
                       isActive
@@ -69,8 +73,8 @@ const Submenu = ({
                     ></span>
                     <span className="flex-1">{subItem.childtitle}</span>
                   </span>
-                )}
-              </a>
+
+              </Link>
             )}
           </li>
         ))}
