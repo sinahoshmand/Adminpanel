@@ -18,4 +18,10 @@ class DashboardController extends Controller
            $text = "This is Panel Page";
         return Inertia::render('Admin/Page' , compact('text'));
     }
+
+
+    public function subPage()
+    {
+        return Inertia::render('Admin/SubPage');
+    }
 }

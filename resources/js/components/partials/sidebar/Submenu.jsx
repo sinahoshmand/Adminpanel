@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import { Collapse } from "react-collapse";
 
 import Icon from "@/components/ui/Icon";
@@ -12,9 +12,7 @@ const Submenu = ({
   toggleMultiMenu,
   activeMultiMenu,
 }) => {
-
-    const [isActive , setActive] = useState(false)
-
+    const locationName = window.location.href;
   return (
     <Collapse isOpened={activeSubmenu === i}>
       <ul className="sub-menu  space-y-4  ">
@@ -56,24 +54,22 @@ const Submenu = ({
               </div>
             ) : (
               <Link href={subItem.childlink}>
-
                   <span
                     className={`${
-                      isActive
+                      locationName === subItem.childlink
                         ? " text-black dark:text-white font-medium"
                         : "text-slate-600 dark:text-slate-300"
                     } text-sm flex space-x-3 items-center transition-all duration-150 rtl:space-x-reverse`}
                   >
                     <span
                       className={`${
-                        isActive
+                          locationName === subItem.childlink
                           ? " bg-slate-900 dark:bg-slate-300 ring-4 ring-opacity-[15%] ring-black-500 dark:ring-slate-300 dark:ring-opacity-20"
                           : ""
                       } h-2 w-2 rounded-full border border-slate-600 dark:border-white inline-block flex-none`}
                     ></span>
                     <span className="flex-1">{subItem.childtitle}</span>
                   </span>
-
               </Link>
             )}
           </li>

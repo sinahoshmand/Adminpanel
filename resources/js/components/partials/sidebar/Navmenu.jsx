@@ -64,7 +64,7 @@ const Navmenu = ({ menus }) => {
         });
       }
     });
-    document.title = `Dashcode  | ${locationName}`;
+
 
     setActiveSubmenu(submenuIndex);
     setMultiMenu(multiMenuIndex);

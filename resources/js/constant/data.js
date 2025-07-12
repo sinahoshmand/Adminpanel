@@ -21,8 +21,9 @@ export const menuItems = [
     link: "#",
     child: [
       {
-        childtitle: "Level 1.1",
-        childlink: "icons",
+        childtitle: "SubPage",
+        childlink: route('page.sub'),
+
       },
 
     ],

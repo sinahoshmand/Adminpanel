@@ -10,6 +10,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { Provider } from "react-redux";
 import store from "./store";
 import "react-toastify/dist/ReactToastify.css";
+import {StrictMode} from "react";
 
 
 createInertiaApp({
@@ -18,11 +19,13 @@ createInertiaApp({
     setup({ el, App, props }) {
         const root = createRoot(el);
         root.render(
-            <Provider store={store}>
-                <main className="App  relative">
-                    <App {...props} />
-                </main>
-            </Provider>
+            <StrictMode>
+                <Provider store={store}>
+                    <main className="App relative">
+                        <App {...props} />
+                    </main>
+                </Provider>
+            </StrictMode>
     );
     },
     progress: {
